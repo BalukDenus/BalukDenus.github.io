@@ -1,0 +1,697 @@
+/* ================= GOOGLE FONTS & RESET ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2A9988;
+    --secondary-color: #4A4A4A;
+    --text-color: #333;
+    --light-text-color: #666;
+    --card-bg-color: #fff;
+    --footer-bg-color: #212121;
+    --star-color: #FFC94D;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ================= HEADER ================= */
+/* ================= HEADER ================= */
+.header {
+    /* Колір, як на фото. Можна використати #F4D876 або #F4E4AD */
+    background-color: #F4D876; 
+    padding: 1rem 0; 
+    border-bottom: none; /* Прибираємо межу */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; 
+    gap: 1rem; /* Простір між основними блоками */
+}
+
+/* ---------------- ЛОГОТИП ТА BROWSE ---------------- */
+.logo-group {
+    display: flex;
+    align-items: center;
+    /* Зменшуємо мінімальну ширину, щоб притиснути елемент зліва */
+    min-width: 180px; /* Або 200px, залежно від бажаного відступу */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem; /* Трохи зменшено шрифт лого */
+    color: var(--secondary-color); /* Темно-сірий колір тексту */
+    margin-right: 3.5rem; /* Відступ між лого та Browse */
+}
+
+.logo img {
+    /* Робимо логотип круглим і бірюзовим, як на фото */
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.nav-browse > a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    /* Додаємо невеликий відступ, щоб іконка стрілки не злипалася */
+    padding-right: 3.5rem; 
+}
+
+/* Стиль для самої стрілки */
+.nav-browse .fas {
+    font-size: 0.75rem; 
+}
+
+
+/* ---------------- ФОРМА ПОШУКУ ---------------- */
+.search-form {
+    flex-grow: 1; /* Займає більшу частину простору */
+    max-width: 600px; 
+    
+    /* Стиль, як на фото */
+    background-color: #F5F1E9; /* Світлий бежевий колір */
+    border: none;
+    border-radius: 4px; 
+    overflow: hidden;
+    height: 40px; 
+    display: flex; /* Для вирівнювання кнопки та поля */
+    align-items: center;
+}
+
+.search-form input {
+    background-color: #F5F1E9;
+    padding: 0.5rem 1rem;
+    flex-grow: 1; 
+    /* Видаляємо дефолтну рамку та outline */
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.search-form button {
+    /* Кнопка на фото світла і квадратна */
+    background-color: #F5F1E9;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--light-text-color);
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------- ДІЇ ТА АВАТАР ---------------- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem; /* Простір між елементами дій */
+}
+
+.action-text {
+    /* Стиль для "Become Instructor" */
+    font-weight: 500;
+    white-space: nowrap; 
+    font-size: 0.95rem;
+        padding-left: 5.5rem; 
+}
+
+.icon-btn {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Стилі для випадаючого меню (потрібні, оскільки ми перегрупували елементи) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    width: 200px;
+    z-index: 10;
+}
+.dropdown-menu.user-menu {
+    left: auto;
+    right: 0;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Аватар користувача */
+.user-avatar img {
+    width: 38px; 
+    height: 38px;
+    border-radius: 50%; 
+    object-fit: cover;
+    /* Додаємо ефект, як на фото (фіолетовий/рожевий відтінок) */
+    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
+}
+
+
+/* ================= HERO SECTION ================= */
+
+/* ====== HERO SECTION ====== */
+.hero-section {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 380px;
+    background: #fff;
+    border-radius: 24px; /* Заокруглення зовнішнього контейнера */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    /* КЛЮЧОВЕ: Потрібен 'hidden', щоб обрізати вміст по border-radius */
+    overflow: hidden; 
+}
+
+/* ===== LEFT SIDE CONTENT (ЖОВТИЙ БЛОК) ===== */
+.hero-content {
+    background: #FFD130; /* Колір з макету */
+    padding: 60px 50px;
+    color: #222;
+    position: relative;
+    /* КЛЮЧОВЕ: Забезпечуємо, щоб жовтий блок не мав заокруглень на правій стороні */
+    border-top-left-radius: 24px; 
+    border-bottom-left-radius: 24px;
+    /* Знімаємо заокруглення справа, яке могло бути успадковане */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Легкий патерн хвиль як у макеті */
+.hero-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("imagescourse/pattern-yellow.png"); /* додай патерн */
+    background-size: cover;
+    opacity: 0.25;
+}
+
+.hero-title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+/* BUTTON */
+.hero-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #fff;
+    color: #222;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.25s;
+    position: relative;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+}
+
+/* ===== RIGHT SIDE IMAGE BLOCK ===== */
+.hero-media {
+    position: relative;
+    height: 100%;
+    /* ВИДАЛЯЄМО border-radius з hero-media, щоб уникнути конфлікту */
+    border-radius: 0; 
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    /* КЛЮЧОВЕ: Використовуємо clip-path, щоб заокруглити лише праві кути */
+    clip-path: inset(0 0 0 0 round 0 24px 24px 0);
+}
+/* Темний прозорий оверлей, як на референсі */
+.hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* КЛЮЧОВЕ: Забезпечуємо, що оверлей також заокруглений справа */
+    border-radius: 0 24px 24px 0; 
+    background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* ===== MEDIA INFO BLOCK (нижній правий текст) ===== */
+.hero-media-info {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    color: #fff;
+    /* Важливо: info-блок повинен бути вище оверлею */
+    z-index: 10;
+}
+
+/* Author */
+.hero-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.author-name {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.author-title {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Text right of author */
+.hero-media-text {
+    font-size: 13px;
+    line-height: 1.2;
+    opacity: 0.9;
+}
+/* ================= MY COURSES SECTION ================= */
+
+.my-courses-section {
+    padding: 3rem 0;
+    background-color: #f7f7f7; /* Світло-сірий фон, як на макеті */
+}
+
+/* ---------------- HEADER (ЗАГОЛОВКИ ТА ФІЛЬТРИ) ---------------- */
+.courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.list-subtitle {
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+.header-filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-dropdown select {
+    /* Стилізація під кнопку на макеті */
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    /* Прибираємо стандартні стрілки (залежить від браузера, краще робити кастомний dropdown) */
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+    padding-right: 2rem; /* Місце для кастомної стрілки, якщо вона використовується */
+    cursor: pointer;
+}
+
+
+/* ---------------- КАРТКИ КУРСІВ (GRID) ---------------- */
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    /* Важливо для макету, щоб картка була цільним блоком */
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-media {
+    position: relative;
+    width: 100%;
+    /* Співвідношення сторін для зображення (наприклад, 16:9) */
+    padding-top: 56.25%; 
+    overflow: hidden;
+}
+
+.course-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.media-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 5;
+}
+
+/* Іконка меню (три крапки) */
+
+
+.card-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.card-author {
+    font-size: 0.85rem;
+    color: var(--secondary-color); /* Зелений/бірюзовий колір */
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.card-author span {
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+.card-progress-text {
+    font-size: 0.85rem;
+    color: #4CAF50; /* Зелений колір для прогресу */
+    font-weight: 600;
+}
+
+.card-progress-text.not-started {
+    color: #aaa; /* Сірий колір для "Not Yet Started" */
+}
+
+.card-progress-text.completed {
+    color: #3880FF; /* Синій/блакитний колір для "Completed!" */
+}
+
+/* ---------------- FOOTER (ПАГІНАЦІЯ) ---------------- */
+.courses-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.browse-more-link {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    display: none; /* Приховуємо на десктопі, показуємо на мобільному */
+}
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.page-number, .page-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.page-number.active, .page-number:hover {
+    background-color: var(--primary-color); /* Бірюзовий, як на логотипі */
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.page-arrow i {
+    font-size: 0.8rem;
+}
+
+.page-arrow.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.page-dots {
+    color: var(--light-text-color);
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+/* ---------------- Адаптивність (Базова) ---------------- */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    /* Горизонтальна лінія над копірайтом */
+    border-top: 1px solid #444; 
+    font-size: 0.9rem;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    /* Темний фон, як на зображенні */
+   background-color: #1B1B1B; 
+    color: #fff;
+    padding-top: 3rem; 
+}
+
+.footer-container {
+    /* Контейнер більше не Flex, оскільки у нас є два чітких блоки: top та bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- ВЕРХНІЙ БЛОК (ТОП) ---------------- */
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    /* Лінія, що розділяє верхній і нижній блоки футера, знаходиться в нижньому блоці */
+}
+
+/* Стиль логотипу в футері */
+.footer-logo-block .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff; /* Білий колір */
+}
+
+.footer-logo-block .logo img {
+    /* Робимо логотип круглим і бірюзовим, як на фото */
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+/* ---------------- СІТКА ПОСИЛАНЬ ---------------- */
+
+.footer-links-grid {
+    display: flex;
+    gap: 4rem; /* Простір між колонками */
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.links-column a {
+    color: #fff;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    white-space: nowrap; /* Запобігаємо перенесенню посилань */
+}
+
+.links-column a:hover {
+    opacity: 1;
+    color: var(--primary-color); /* При наведенні курсору */
+}
+
+.footer-copyright {
+    color: #fff;
+    opacity: 0.7;
+}
+
+/* Соціальні мережі */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+#scrollToTopBtn {
+  display: none; /* Спочатку приховати кнопку */
+  position: fixed; /* Зафіксувати позицію на екрані */
+  bottom: 20px; /* Відступ від низу */
+  width: 50px;
+  height: 50px;
+  right: 30px; /* Відступ від правого краю */
+  z-index: 99; /* Переконатися, що кнопка поверх інших елементів */
+  border: none; /* Прибрати стандартну рамку */
+  outline: none; /* Прибрати контур фокусу */
+  background-color: #F5E1A4; /* Колір вашого оранжевого акценту */
+  color: #000; /* Колір тексту/стрілки */
+  cursor: pointer; /* Зробити курсор "клікабельним" */
+  padding: 15px; /* Внутрішній відступ */
+  border-radius: 30%; /* Зробити кнопку круглою */
+  font-size: 18px; /* Розмір стрілки */
+  line-height: 0; /* Вирівнювання символу стрілки */
+  transition: background-color 0.3s, opacity 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #DBC88F; /* Темніший колір при наведенні */
+}

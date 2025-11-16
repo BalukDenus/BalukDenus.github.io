@@ -1,0 +1,411 @@
+/* ================= GOOGLE FONTS & RESET ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2A9988;
+    --secondary-color: #4A4A4A;
+    --text-color: #333;
+    --light-text-color: #666;
+    --card-bg-color: #fff;
+    --footer-bg-color: #212121;
+    --star-color: #FFC94D;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ================= HEADER ================= */
+/* ================= HEADER ================= */
+.header {
+    /* Колір, як на фото. Можна використати #F4D876 або #F4E4AD */
+    background-color: #F4D876; 
+    padding: 1rem 0; 
+    border-bottom: none; /* Прибираємо межу */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; 
+    gap: 1rem; /* Простір між основними блоками */
+}
+
+/* ---------------- ЛОГОТИП ТА BROWSE ---------------- */
+.logo-group {
+    display: flex;
+    align-items: center;
+    /* Зменшуємо мінімальну ширину, щоб притиснути елемент зліва */
+    min-width: 180px; /* Або 200px, залежно від бажаного відступу */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem; /* Трохи зменшено шрифт лого */
+    color: var(--secondary-color); /* Темно-сірий колір тексту */
+    margin-right: 3.5rem; /* Відступ між лого та Browse */
+}
+
+.logo img {
+    /* Робимо логотип круглим і бірюзовим, як на фото */
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.nav-browse > a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    /* Додаємо невеликий відступ, щоб іконка стрілки не злипалася */
+    padding-right: 3.5rem; 
+}
+
+/* Стиль для самої стрілки */
+.nav-browse .fas {
+    font-size: 0.75rem; 
+}
+
+
+/* ---------------- ФОРМА ПОШУКУ ---------------- */
+.search-form {
+    flex-grow: 1; /* Займає більшу частину простору */
+    max-width: 600px; 
+    
+    /* Стиль, як на фото */
+    background-color: #F5F1E9; /* Світлий бежевий колір */
+    border: none;
+    border-radius: 4px; 
+    overflow: hidden;
+    height: 40px; 
+    display: flex; /* Для вирівнювання кнопки та поля */
+    align-items: center;
+}
+
+.search-form input {
+    background-color: #F5F1E9;
+    padding: 0.5rem 1rem;
+    flex-grow: 1; 
+    /* Видаляємо дефолтну рамку та outline */
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.search-form button {
+    /* Кнопка на фото світла і квадратна */
+    background-color: #F5F1E9;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--light-text-color);
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------- ДІЇ ТА АВАТАР ---------------- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem; /* Простір між елементами дій */
+}
+
+.action-text {
+    /* Стиль для "Become Instructor" */
+    font-weight: 500;
+    white-space: nowrap; 
+    font-size: 0.95rem;
+        padding-left: 5.5rem; 
+}
+
+.icon-btn {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Стилі для випадаючого меню (потрібні, оскільки ми перегрупували елементи) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    width: 200px;
+    z-index: 10;
+}
+.dropdown-menu.user-menu {
+    left: auto;
+    right: 0;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Аватар користувача */
+.user-avatar img {
+    width: 38px; 
+    height: 38px;
+    border-radius: 50%; 
+    object-fit: cover;
+    /* Додаємо ефект, як на фото (фіолетовий/рожевий відтінок) */
+    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
+}
+
+
+
+/* ====== Секція 404: Головний контейнер ====== */
+.error-404-section {
+    display: flex;
+    justify-content: center; /* Центруємо вміст по горизонталі */
+    align-items: center;
+    max-width: 1200px;
+    min-height: 500px; /* Мінімальна висота для гарного вигляду */
+    margin: 60px auto;
+    padding: 40px;
+    
+    /* Можна додати темний фон, якщо це окремий блок, 
+       або залишити прозорим, якщо це головна частина сторінки */
+    /* background-color: #222; */ 
+    color: #fff; /* Білий текст */
+}
+
+/* Контент (Текст помилки) */
+.error-content {
+    flex: 1; /* Займає більшу частину простору */
+    max-width: 500px;
+    padding-right: 50px;
+}
+
+.error-code {
+    font-size: 100px;
+    font-weight: 900;
+    color: #0fc49b; /* Ваш зелений акцент */
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.error-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333; /* Використовуйте білий, якщо фон темний */
+    /* Припустимо, що основний фон сторінки світлий, тому #333 */
+}
+
+.error-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Кнопки */
+.error-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+/* Зелена кнопка (Акцент) */
+.btn-primary {
+    background-color: #0fc49b;
+    color: #fff;
+    border: 2px solid #0fc49b;
+}
+
+.btn-primary:hover {
+    background-color: #00a080;
+}
+
+/* Додаткова кнопка */
+.btn-secondary {
+    background-color: transparent;
+    color: #0fc49b;
+    border: 2px solid #0fc49b;
+}
+
+.btn-secondary:hover {
+    background-color: #0fc49b;
+    color: #fff;
+}
+
+/* Зображення */
+.error-image-placeholder {
+    flex: 1; /* Займає решту простору */
+    max-width: 500px;
+    text-align: right;
+}
+
+.error-illustration {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ---------------- Адаптивність (Базова) ---------------- */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    /* Горизонтальна лінія над копірайтом */
+    border-top: 1px solid #444; 
+    font-size: 0.9rem;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    /* Темний фон, як на зображенні */
+   background-color: #1B1B1B; 
+    color: #fff;
+    padding-top: 3rem; 
+}
+
+.footer-container {
+    /* Контейнер більше не Flex, оскільки у нас є два чітких блоки: top та bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- ВЕРХНІЙ БЛОК (ТОП) ---------------- */
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    /* Лінія, що розділяє верхній і нижній блоки футера, знаходиться в нижньому блоці */
+}
+
+/* Стиль логотипу в футері */
+.footer-logo-block .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff; /* Білий колір */
+}
+
+.footer-logo-block .logo img {
+    /* Робимо логотип круглим і бірюзовим, як на фото */
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+/* ---------------- СІТКА ПОСИЛАНЬ ---------------- */
+
+.footer-links-grid {
+    display: flex;
+    gap: 4rem; /* Простір між колонками */
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.links-column a {
+    color: #fff;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    white-space: nowrap; /* Запобігаємо перенесенню посилань */
+}
+
+.links-column a:hover {
+    opacity: 1;
+    color: var(--primary-color); /* При наведенні курсору */
+}
+
+.footer-copyright {
+    color: #fff;
+    opacity: 0.7;
+}
+
+/* Соціальні мережі */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
