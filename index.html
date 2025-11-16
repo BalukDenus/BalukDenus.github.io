@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCourse.io</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+
+            <div class="logo-group">
+                <a href="#" class="logo">
+                    <img src="styles/Image/logo.svg" alt="MyCourse.io Logo">
+                    <span>MyCourse.io</span>
+                </a>
+
+                <div class="dropdown nav-browse">
+                    <a href="#">Browse <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Programming</a></li>
+                        <li><a href="#">Business & Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <form class="search-form">
+                <input type="text" placeholder="Search for course">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="header-actions">
+
+                <a href="#" class="action-text">Become Instructor</a>
+
+                <a href="#" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+
+                <a href="#" class="icon-btn"><i class="fas fa-bell"></i></a>
+
+                <div class="dropdown user-avatar-dropdown">
+                    <a href="#" class="user-avatar">
+                        <img src="styles/Image/profile.png" alt="User Avatar">
+                    </a>
+                    <ul class="dropdown-menu user-menu">
+                        <li><a href="#">My Courses</a></li>
+                        <li><a href="#">My Cart</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Learn something new everyday.</h1>
+                    <p>Become professionals and ready to join the world.</p>
+                    <div class="hero-buttons">
+                        <a href="mycoursepage/course.html" class="btn btn-primary">Browse Course</a>
+                        <a href="page404/page404.html" class="btn btn-secondary">Start make your account</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="styles/Image/codeScreen.png" alt="Code Snippet">
+                </div>
+            </div>
+        </section>
+        <section class="course-section-recommend">
+            <div class="container">
+
+                <div class="course-list-incomplete">
+                    <h2 class="cs-title">Complete your Course</h2>
+                    <p class="cs-subtitle">We know the best things for You. Top picks for You.</p>
+
+                    <div class="cs-grid cs-grid-3">
+
+                        <article class="cs-card cs-card-progress">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/javaprg.png" alt="Java Programming Course">
+                                <i class="fas fa-ellipsis-h cs-card-menu-icon"></i>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">Java Programming Beginner</h3>
+                                <p class="cs-card-author">Kittani Studio</p>
+                                <p class="cs-card-progress-text">4/10 Videos Completed</p>
+                            </div>
+                        </article>
+
+                        <article class="cs-card cs-card-progress">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/ios.png" alt="iOS 13 & Swift 5 Course">
+                                <i class="fas fa-ellipsis-h cs-card-menu-icon"></i>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">IOS 13 & Swift 5 - Complete iOS...</h3>
+                                <p class="cs-card-author">Kittani Studio</p>
+                                <p class="cs-card-progress-text">12/40 Videos Completed</p>
+                            </div>
+                        </article>
+
+                        <article class="cs-card cs-card-progress">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/wordpress.png" alt="Wordpress Intermediate Course">
+                                <i class="fas fa-ellipsis-h cs-card-menu-icon"></i>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">Wordpress Course Intermediate</h3>
+                                <p class="cs-card-author">Gnoniyyu Mauidi</p>
+                                <p class="cs-card-progress-text">3/8 Videos Completed</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="cs-tag-filters">
+                        <a href="#" class="cs-tag active">All Recommendation</a>
+                        <a href="#" class="cs-tag">Adobe Illustrator</a>
+                        <a href="#" class="cs-tag">Adobe Photoshop</a>
+                        <a href="#" class="cs-tag">UI Design</a>
+                        <a href="#" class="cs-tag">Web Programming</a>
+                        <a href="#" class="cs-tag">Mobile Programming</a>
+                        <a href="#" class="cs-tag">Backend Development</a>
+                        <a href="jscoursepage/jscourse.html" class="cs-tag">Vue JS</a>
+                    </div>
+                </div>
+
+                <div class="course-list-premium">
+                    <h2 class="cs-title">More from Kitani Studio</h2>
+                    <p class="cs-subtitle">We know the best things for You. Top picks for You.</p>
+
+                    <div class="cs-grid cs-grid-4">
+
+                        <article class="cs-card cs-card-premium">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/javascript.png" alt="VUE JS SCRATCH COURSE">
+                            </div>
+                            <div class="cs-card-badges">
+                                <span class="cs-badge cs-badge-best">Best Seller</span>
+                                <span class="cs-badge cs-badge-discount">20% OFF</span>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">VUE JS SCRATCH COURSE</h3>
+                                <p class="cs-card-author">Kittani Studio</p>
+                                <p class="cs-card-desc">More than 8yr Experience as Illustrator. Learn how to becoming
+                                    professional Illustrator Now...</p>
+                                <div class="cs-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="cs-rating-count">(1.2K)</span>
+                                </div>
+                                <div class="cs-card-price">
+                                    <span class="cs-price-current">$24.92</span>
+                                    <span class="cs-price-old">$32.90</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cs-card cs-card-premium">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/uidesign.png" alt="UI DESIGN FOR BEGINNERS">
+                            </div>
+                            <div class="cs-card-badges">
+                                <span class="cs-badge cs-badge-best">Best Seller</span>
+                                <span class="cs-badge cs-badge-discount">20% OFF</span>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">UI DESIGN FOR BEGINNERS</h3>
+                                <p class="cs-card-author">Kittani Studio</p>
+                                <p class="cs-card-desc">Learn how to make web application with Vue.js Framework...</p>
+                                <div class="cs-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="cs-rating-count">(1.2K)</span>
+                                </div>
+                                <div class="cs-card-price">
+                                    <span class="cs-price-current">$24.92</span>
+                                    <span class="cs-price-old">$32.90</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cs-card cs-card-premium">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/mobiledevop.png" alt="MOBILE DEV REACT NATIVE">
+                            </div>
+                            <div class="cs-card-badges">
+                                <span class="cs-badge cs-badge-best">Best Seller</span>
+                                <span class="cs-badge cs-badge-discount">20% OFF</span>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">MOBILE DEV REACT NATIVE</h3>
+                                <p class="cs-card-author">Kittani Studio</p>
+                                <p class="cs-card-desc">More than 8yr Experience as Illustrator. Learn how to becoming
+                                    professional Illustrator Now...</p>
+                                <div class="cs-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="cs-rating-count">(1.2K)</span>
+                                </div>
+                                <div class="cs-card-price">
+                                    <span class="cs-price-current">$24.92</span>
+                                    <span class="cs-price-old">$32.90</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cs-card cs-card-premium">
+                            <div class="cs-card-media">
+                                <img src="styles/Image/webdevop.png" alt="WEBSITE DEV ZERO TO HERO">
+                            </div>
+                            <div class="cs-card-badges">
+                                <span class="cs-badge cs-badge-best">Best Seller</span>
+                                <span class="cs-badge cs-badge-discount">20% OFF</span>
+                            </div>
+                            <div class="cs-card-content">
+                                <h3 class="cs-card-title">WEBSITE DEV ZERO TO HERO</h3>
+                                <p class="cs-card-author">Kittani Studio</p>
+                                <p class="cs-card-desc">More than 8yr Experience as Illustrator. Learn how to becoming
+                                    professional Illustrator Now...</p>
+                                <div class="cs-card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="cs-rating-count">(1.2K)</span>
+                                </div>
+                                <div class="cs-card-price">
+                                    <span class="cs-price-current">$24.92</span>
+                                    <span class="cs-price-old">$32.90</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="courses-section">
+            <div class="container">
+                <h2>Trending Course</h2>
+                <p class="section-subtitle">We know the best things for You. Top picks for You.</p>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/adobe.png" alt="Adobe Illustrator Scretch Course">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Adobe Illustrator Scretch Course</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">More than 8yr Experience as Illustrator. Learn how to becoming
+                                professional Illustrator Now...</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/swift.png" alt="Bootcamp  Vue.js Web Framework">
+                            <span class="badge best-seller">Best Seller</span> 
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Bootcamp Vue.js Web Framework</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">Learn how to make web application with Vue.js Framework.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/design.png" alt="Design Fundamentals">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Design Fundamentals</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">More than 8yr Experience as Illustrator. Learn how to becoming
+                                professional Illustrator Now...</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/uberClone.png" alt="Uber Clone App">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Ionic - Build iOS, Android & Web...</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">More than 8yr Experience as Illustrator. Learn how to becoming
+                                professional Illustrator Now...</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/img1.png" alt="Adobe Illustrator Scretch Course">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Adobe Illustrator Scretch Course</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">More than 8yr Experience as Illustrator. Learn how to becoming
+                                professional Illustrator Now...</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/img2.png" alt="Bootcamp  Vue.js Web Framework">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Bootcamp Vue.js Web Framework</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">Learn how to make web application with Vue.js Framework.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/img3.png" alt="Design Fundamentals">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Design Fundamentals</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">More than 8yr Experience as Illustrator. Learn how to becoming
+                                professional Illustrator Now...</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="card-image">
+                            <img src="styles/Image/img4.png" alt="Uber Clone App">
+                            <span class="badge best-seller">Best Seller</span>
+                            <span class="badge discount">20% OFF</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Ionic - Build iOS, Android & Web...</h3>
+                            <p class="instructor">by Kitani Studio</p>
+                            <p class="description">More than 8yr Experience as Illustrator. Learn how to becoming
+                                professional Illustrator Now...</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(1.2K)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$24.92</span>
+                                <span class="original-price">$32.90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instructors-section">
+            <div class="container">
+                <h2>Popular Instructor</h2>
+                <p class="section-subtitle">We know the best things for You. Top picks for You.</p>
+                <div class="instructors-grid">
+                    <div class="instructor-card">
+                        <img src="styles/Image/AlexanderBastian.png" alt="Alexander Bastian">
+                        <h3>Alexander Bastian</h3>
+                        <p>Expert Mobile Engineer</p>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="styles/Image/LabieCarthaline.png" alt="Labie Carthaline">
+                        <h3>Labie Carthaline</h3>
+                        <p>Marketing Specialist</p>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="styles/Image/JonathanDoe.png" alt="Jonathan Doe">
+                        <h3>Jonathan Doe</h3>
+                        <p>Financial Strategist</p>
+                    </div>
+                    <div class="instructor-card">
+                        <img src="styles/Image/KitaniSarasvati.png" alt="Kitani Sarasvati">
+                        <h3>Kitani Sarasvati</h3>
+                        <p>Film Maker & Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="container newsletter-container">
+
+                <div class="newsletter-content">
+                    <h2>Join and get amazing discount</h2>
+                    <p>With our responsive themes and mobile and desktop apps</p>
+                </div>
+
+                <form class="newsletter-form">
+                    <div class="input-with-icon">
+                        <input type="email" placeholder="Email Address">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <button type="submit" class="btn btn-subscribe">Subscribe</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+    <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <div class="footer-top">
+
+                <div class="footer-logo-block">
+                    <a href="#" class="logo">
+                        <img src="styles/Image/logo.svg" alt="MyCourse.io Logo">
+                        <span>MyCourse.io</span>
+                    </a>
+                </div>
+
+                <div class="footer-links-grid">
+
+                    <div class="links-column">
+                        <a href="#">Web Programming</a>
+                        <a href="#">Mobile Programming</a>
+                        <a href="#">Java Beginner</a>
+                        <a href="#">PHP Beginner</a>
+                    </div>
+
+                    <div class="links-column">
+                        <a href="#">Adobe Illustrator</a>
+                        <a href="#">Adobe Photoshop</a>
+                        <a href="#">Design Logo</a>
+                    </div>
+
+                    <div class="links-column">
+                        <a href="#">Writing Course</a>
+                        <a href="#">Photography</a>
+                        <a href="#">Video Making</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">Copyright © MyCourse.io 2024. All Rights Reserved</p>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
