@@ -10,10 +10,9 @@
     --star-color: #FFC94D;
     --border-radius: 12px;
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-
-    /* ДОДАНО: Змінна для фону сторінки */
-    --page-bg-color: #fff; 
+    --page-bg-color: #fff;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +32,9 @@ body {
     padding: 0 2rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 600;
 }
 
@@ -51,29 +52,24 @@ img {
     display: block;
 }
 
-/* ================= HEADER ================= */
-/* ================= HEADER ================= */
 .header {
-    /* Колір, як на фото. Можна використати #F4D876 або #F4E4AD */
-    background-color: #F4D876; 
-    padding: 1rem 0; 
-    border-bottom: none; /* Прибираємо межу */
+    background-color: #F4D876;
+    padding: 1rem 0;
+    border-bottom: none;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; 
-    gap: 1rem; /* Простір між основними блоками */
+    flex-wrap: nowrap;
+    gap: 1rem;
 }
 
-/* ---------------- ЛОГОТИП ТА BROWSE ---------------- */
 .logo-group {
     display: flex;
     align-items: center;
-    /* Зменшуємо мінімальну ширину, щоб притиснути елемент зліва */
-    min-width: 180px; /* Або 200px, залежно від бажаного відступу */
+    min-width: 180px;
 }
 
 .logo {
@@ -81,13 +77,12 @@ img {
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    font-size: 1.25rem; /* Трохи зменшено шрифт лого */
-    color: var(--secondary-color); /* Темно-сірий колір тексту */
-    margin-right: 3.5rem; /* Відступ між лого та Browse */
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-right: 3.5rem;
 }
 
 .logo img {
-    /* Робимо логотип круглим і бірюзовим, як на фото */
     width: 38px;
     height: 38px;
     background-color: var(--primary-color);
@@ -96,47 +91,43 @@ img {
     object-fit: contain;
 }
 
-.nav-browse > a {
+.nav-browse>a {
     font-weight: 500;
     font-size: 1rem;
     color: var(--secondary-color);
-    /* Додаємо невеликий відступ, щоб іконка стрілки не злипалася */
-    padding-right: 3.5rem; 
+
+    padding-right: 3.5rem;
 }
 
-/* Стиль для самої стрілки */
+
 .nav-browse .fas {
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
 }
 
 
-/* ---------------- ФОРМА ПОШУКУ ---------------- */
 .search-form {
-    flex-grow: 1; /* Займає більшу частину простору */
-    max-width: 600px; 
-    
-    /* Стиль, як на фото */
-    background-color: #F5F1E9; /* Світлий бежевий колір */
+    flex-grow: 1;
+    max-width: 600px;
+
+    background-color: #F5F1E9;
     border: none;
-    border-radius: 4px; 
+    border-radius: 4px;
     overflow: hidden;
-    height: 40px; 
-    display: flex; /* Для вирівнювання кнопки та поля */
+    height: 40px;
+    display: flex;
     align-items: center;
 }
 
 .search-form input {
     background-color: #F5F1E9;
     padding: 0.5rem 1rem;
-    flex-grow: 1; 
-    /* Видаляємо дефолтну рамку та outline */
+    flex-grow: 1;
     border: none;
     outline: none;
     font-size: 0.95rem;
 }
 
 .search-form button {
-    /* Кнопка на фото світла і квадратна */
     background-color: #F5F1E9;
     border: none;
     padding: 0 1rem;
@@ -149,19 +140,17 @@ img {
     justify-content: center;
 }
 
-/* ---------------- ДІЇ ТА АВАТАР ---------------- */
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.2rem; /* Простір між елементами дій */
+    gap: 1.2rem;
 }
 
 .action-text {
-    /* Стиль для "Become Instructor" */
     font-weight: 500;
-    white-space: nowrap; 
+    white-space: nowrap;
     font-size: 0.95rem;
-        padding-left: 5.5rem; 
+    padding-left: 5.5rem;
 }
 
 .icon-btn {
@@ -174,7 +163,6 @@ img {
     color: var(--primary-color);
 }
 
-/* Стилі для випадаючого меню (потрібні, оскільки ми перегрупували елементи) */
 .dropdown {
     position: relative;
 }
@@ -191,58 +179,54 @@ img {
     width: 200px;
     z-index: 10;
 }
+
 .dropdown-menu.user-menu {
     left: auto;
     right: 0;
 }
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Аватар користувача */
 .user-avatar img {
-    width: 38px; 
+    width: 38px;
     height: 38px;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
-    /* Додаємо ефект, як на фото (фіолетовий/рожевий відтінок) */
-    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
-}
-/* --- СТИЛІ АВАТАРОК В ЧАТІ --- */
-/* Стилізований аватар, використовуємо клас, який є в HTML */
-.avatar-placeholder img {
-    width: 30px; /* Відповідає розміру .avatar-placeholder */
-    height: 30px;
-    border-radius: 50%; 
-    object-fit: cover;
-    /* Додаємо ефект, як на фото (фіолетовий/рожевий відтінок) */
-    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
+    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7;
 }
 
-/* --- 1. СТИЛІ СЕКЦІЇ LIVE WEBINAR --- */
-/* --- СТИЛІ АВАТАРОК В ЧАТІ --- */
 .avatar-placeholder img {
-    width: 30px; 
+    width: 30px;
     height: 30px;
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
+    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7;
 }
 
-/* --- 1. СТИЛІ СЕКЦІЇ LIVE WEBINAR --- */
+.avatar-placeholder img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7;
+}
+
+
 #live-webinar-section {
     font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     padding: 40px 0;
 }
+
 .webinar-content {
-    /* Робимо зелену область для тексту */
-    padding: 25px; 
-    flex-grow: 1; /* Займає всю доступну ширину в картці */
-    max-width: 60%; /* Наприклад, 60% ширини картки */
+    padding: 25px;
+    flex-grow: 1;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Розтягуємо вміст по вертикалі */
+    justify-content: space-between;
 }
 
 .webinar-container {
@@ -255,28 +239,23 @@ img {
 
 }
 
-/* --- 2. ЛІВА ЧАСТИНА (ЛИШЕ ФОТО) --- */
+
 .webinar-video-area {
-    flex: 2; /* Займає більшу частину */
+    flex: 2;
     position: relative;
-    /* ВИДАЛЕНО: padding-bottom, щоб висоту задавало саме зображення */
-    padding: 0; 
-    /* ФОН: використовуємо прозорий або колір контейнера, щоб не було "квадрата" */
-    background-color: transparent; 
+
+    padding: 0;
+    background-color: transparent;
 }
 
-/* ОНОВЛЕНО: Стилізація самого зображення (замість single-image-placeholder) */
 .webinar-video-area img {
-    /* Робимо його не абсолютно позиціонованим, щоб дозволити йому 
-       диктувати висоту контейнера .webinar-video-area */
-    position: static; 
+    position: static;
     display: block;
     width: 100%;
-    height: auto; /* Збереження оригінального співвідношення сторін */
-    object-fit: initial; /* Не використовуємо cover чи contain */
+    height: auto;
+    object-fit: initial;
 }
 
-/* --- 3. ЧАТ (ПРАВА ЧАСТИНА) --- */
 .webinar-chat-area {
     flex: 1;
     min-width: 350px;
@@ -317,7 +296,7 @@ img {
 }
 
 .avatar-placeholder {
-    width: 30px; 
+    width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #ccc;
@@ -325,7 +304,7 @@ img {
     overflow: hidden;
     flex-shrink: 0;
 }
-/* .avatar-placeholder img стилізовано на початку файлу */
+
 
 .username {
     font-weight: bold;
@@ -346,7 +325,7 @@ img {
     font-weight: bold;
 }
 
-/* Поле Вводу (Input) */
+
 .chat-input {
     padding: 15px 20px;
     border-top: 1px solid #eee;
@@ -378,140 +357,128 @@ img {
     color: #000;
 }
 
-/* Основний контейнер секції */
-/* ====== Загальні стилі ====== */
 
-/* ====== Загальні ====== */
-
-    .course-detail-section {
-        max-width: 1200px;
-        margin: 40px auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 0 20px;
-    }
-
-    /* ====== Ліва колонка ====== */
-    .main-content {
-        width: 60%;
-    }
-
-    /* Заголовок */
-    .course-title {
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 25px;
-    }
-
-    /* Студія + статистика */
-    .course-meta {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
-    }
-
-    .studio-info {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .studio-logo {
-        width: 40px;
-    }
-
-    .studio-name {
-        font-weight: 700;
-    }
-
-    .studio-tagline {
-        font-size: 13px;
-        color: #777;
-    }
-
-    /* Статистика */
-    .course-stats {
-        display: flex;
-        gap: 20px;
-    }
-
-    .stat-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .stat-icon {
-        width: 18px;
-        height: 18px;
-    }
-
-    /* Опис */
-    .description-title {
-        font-size: 22px;
-        font-weight: 700;
-    }
-
-    .description-text {
-        color: #444;
-        line-height: 1.6;
-    }
-
-    .browse-more {
-        font-weight: 700;
-        margin-bottom: 15px;
-        display: inline-block;
-    }
-
-    /* ====== Права колонка (вебінар) ====== */
-
- .sidebar-webinar {
-    width: 40%;
-    /* justify-content: flex-end; - це може конфліктувати, якщо картка матиме фіксовану ширину */
-    display: flex; /* Важливо для вирівнювання картки праворуч, якщо потрібно */
-    justify-content: flex-end; /* Щоб картка була праворуч */
+.course-detail-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
 }
-    /* Карточка вебінару */
-   .webinar-card {
+
+.main-content {
+    width: 60%;
+}
+
+
+.course-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.studio-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.studio-logo {
+    width: 40px;
+}
+
+.studio-name {
+    font-weight: 700;
+}
+
+.studio-tagline {
+    font-size: 13px;
+    color: #777;
+}
+
+
+.course-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.description-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.description-text {
+    color: #444;
+    line-height: 1.6;
+}
+
+.browse-more {
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+
+.sidebar-webinar {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.webinar-card {
     position: relative;
-    /* Змінюємо ширину, щоб дозволити місце для фото */
-    width: 330px; 
-    
-    /* Новий Flex-контейнер для вмісту та зображення */
-    display: flex; 
-    
+    width: 330px;
+    display: flex;
+
     background: #0fc49b;
     border-radius: 8px;
-    padding: 0; /* Прибираємо внутрішній padding тут */
+    padding: 0;
     color: #fff;
-    overflow: hidden; /* Приховуємо все зайве, що може вилізти */
+    overflow: hidden;
 }
-   .webinar-header,
+
+.webinar-header,
 .webinar-title,
 .webinar-author,
 .btn-get-it-now {
-    position: relative; /* Важливо: робить їх над фото (z-index: 2 за замовчуванням) */
-    z-index: 2; /* Явно вказуємо, що текст вище зображення */
+    position: relative;
+    z-index: 2;
 }
 
-/* Стилі для заголовка "WEBINAR" та дати */
 .webinar-header {
-    /* Цей контейнер більше не "justify-content: space-between", а block */
-    display: block; /* Забезпечує, що дата буде під тегом */
+    display: block;
     margin-bottom: 15px;
 }
 
 .webinar-tag {
-    font-size: 14px; /* Розмір "WEBINAR" */
+    font-size: 14px;
     font-weight: 700;
-    display: block; /* Щоб дата була на новому рядку */
-    margin-bottom: 5px; /* Невеликий відступ між "WEBINAR" та датою */
+    display: block;
+    margin-bottom: 5px;/
 }
 
 .webinar-date {
-    font-size: 11px; /* Маленький шрифт для дати */
-    display: block; /* Забезпечує, що дата буде під тегом */
+    font-size: 11px;
+    display: block;
 }
 
 .webinar-title {
@@ -537,65 +504,60 @@ img {
     margin-bottom: 10px;
 }
 
-    /* ====== Фото праворуч, як у макеті ====== */
-   /* ====== Фото праворуч, як у макеті ====== */
+
 .webinar-image-placeholder {
-    position: absolute; /* Абсолютне позиціонування */
-    top: 0; /* Вирівнюємо по верхньому краю картки */
-    right: -70px; /* Зміщення фото вправо, щоб воно частково накривалося */
-    /* Можливо, змініть це значення, щоб відрегулювати, наскільки сильно фото виступає */
-    
-    width: 230px; /* Ширина фото, як ви вказали */
-    height: 100%; /* Розтягуємо на всю висоту батьківського блоку */
-    
-    background-image: url('imagesjs/wonen.png'); /* Ваш шлях до фото */
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 230px;
+    height: 100%;
+
+    background-image: url('imagesjs/wonen.png');
     background-size: cover;
     background-position: center top;
-    border-radius: 0 8px 8px 0; /* Округлюємо лише праві кути */
-    z-index: 1; /* Зображення повинно бути під текстом за замовчуванням */
+    border-radius: 0 8px 8px 0;
+    z-index: 1;
 }
 
 .newsletter-section {
-    padding: 4rem 0; /* Вертикальний відступ */
+    padding: 4rem 0;
 }
 
 .newsletter-container {
-    background-color: #3880FF; /* Яскравий синій колір */
-    border-radius: var(--border-radius); /* Використовуємо існуючий радіус */
+    background-color: #3880FF;
+    border-radius: var(--border-radius);
     color: #fff;
-    padding: 3rem 4rem; /* Внутрішній відступ */
+    padding: 3rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
     position: relative;
-    overflow: hidden; /* Обрізаємо фоновий малюнок по краях */
+    overflow: hidden;
 }
 
-/* ---------------- Фоновий малюнок (декорація справа) ---------------- */
+
 .newsletter-container::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 300px; /* Приблизна ширина малюнка */
+    width: 300px;
     height: 100%;
-    /* ЦЕ ВАЖЛИВО: вам потрібно буде замінити цей URL на реальний шлях 
-       до зображення, яке містить абстрактний малюнок */
     background: url('path/to/abstract_design.png') no-repeat right center / contain;
-    z-index: 1; 
-    opacity: 0.8; 
+    z-index: 1;
+    opacity: 0.8;
 }
-/* Переносимо контент форми вище за фоновий малюнок */
-.newsletter-content, .newsletter-form {
+
+.newsletter-content,
+.newsletter-form {
     z-index: 2;
 }
 
-/* ---------------- Контент та заголовки ---------------- */
+
 .newsletter-content {
     max-width: 50%;
-    /* Гарантуємо, що текст вирівняний зліва */
-    text-align: left; 
+    text-align: left;
 }
 
 .newsletter-content h2 {
@@ -604,31 +566,27 @@ img {
     margin-bottom: 0.5rem;
     line-height: 1.2;
     color: #fff;
-    /* Також гарантуємо вирівнювання для h2 */
     text-align: left;
 }
 
 .newsletter-content p {
     font-size: 1rem;
     opacity: 0.9;
-    /* Також гарантуємо вирівнювання для p */
     text-align: left;
 }
 
 
-/* ---------------- Форма підписки ---------------- */
 .newsletter-form {
     display: flex;
     gap: 1rem;
     align-items: center;
-    min-width: 400px; 
+    min-width: 400px;
 }
 
-/* Контейнер для поля вводу з іконкою */
 .input-with-icon {
     position: relative;
     flex-grow: 1;
-    background-color: rgba(255, 255, 255, 0.4); /* Світлий прозорий фон */
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 4px;
     height: 50px;
 }
@@ -636,7 +594,7 @@ img {
 .input-with-icon input {
     width: 100%;
     height: 100%;
-    padding: 0.75rem 3rem 0.75rem 1rem; /* Збільшуємо padding праворуч для іконки */
+    padding: 0.75rem 3rem 0.75rem 1rem;
     border: none;
     background: transparent;
     outline: none;
@@ -644,12 +602,12 @@ img {
     font-size: 1rem;
 }
 
-/* Стиль плейсхолдера, щоб він був світлішим */
+
 .input-with-icon input::placeholder {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Стиль іконки */
+
 .input-with-icon .fas {
     position: absolute;
     right: 1rem;
@@ -659,10 +617,9 @@ img {
     font-size: 1.1rem;
 }
 
-/* Кнопка підписки */
+
 .btn-subscribe {
-    /* Зелений колір як на макеті */
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: #fff;
     font-weight: 600;
     padding: 0.9rem 1.5rem;
@@ -670,7 +627,7 @@ img {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    height: 50px; /* Вирівнюємо з висотою поля вводу */
+    height: 50px;
 }
 
 .btn-subscribe:hover {
@@ -682,47 +639,43 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
-    /* Горизонтальна лінія над копірайтом */
-    border-top: 1px solid #444; 
+    border-top: 1px solid #444;
     font-size: 0.9rem;
 }
 
-/* ================= FOOTER ================= */
 .footer {
-    /* Темний фон, як на зображенні */
-   background-color: #1B1B1B; 
+
+    background-color: #1B1B1B;
     color: #fff;
-    padding-top: 3rem; 
+    padding-top: 3rem;
 }
 
 .footer-container {
-    /* Контейнер більше не Flex, оскільки у нас є два чітких блоки: top та bottom */
     display: flex;
     flex-direction: column;
 }
 
-/* ---------------- ВЕРХНІЙ БЛОК (ТОП) ---------------- */
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     padding-bottom: 2rem;
-    /* Лінія, що розділяє верхній і нижній блоки футера, знаходиться в нижньому блоці */
+
 }
 
-/* Стиль логотипу в футері */
+
 .footer-logo-block .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #fff; /* Білий колір */
+    color: #fff;
 }
 
 .footer-logo-block .logo img {
-    /* Робимо логотип круглим і бірюзовим, як на фото */
+
     width: 38px;
     height: 38px;
     background-color: var(--primary-color);
@@ -731,11 +684,11 @@ img {
     object-fit: contain;
 }
 
-/* ---------------- СІТКА ПОСИЛАНЬ ---------------- */
+
 
 .footer-links-grid {
     display: flex;
-    gap: 4rem; /* Простір між колонками */
+    gap: 4rem;/
 }
 
 .links-column {
@@ -749,12 +702,12 @@ img {
     font-size: 0.95rem;
     opacity: 0.8;
     transition: opacity 0.2s;
-    white-space: nowrap; /* Запобігаємо перенесенню посилань */
+    white-space: nowrap;
 }
 
 .links-column a:hover {
     opacity: 1;
-    color: var(--primary-color); /* При наведенні курсору */
+    color: var(--primary-color);
 }
 
 .footer-copyright {
@@ -762,7 +715,7 @@ img {
     opacity: 0.7;
 }
 
-/* Соціальні мережі */
+
 .footer-social {
     display: flex;
     gap: 1rem;
@@ -779,26 +732,181 @@ img {
 }
 
 #scrollToTopBtn {
-  display: none; /* Спочатку приховати кнопку */
-  position: fixed; /* Зафіксувати позицію на екрані */
-  bottom: 20px; /* Відступ від низу */
-  width: 50px;
-  height: 50px;
-  right: 30px; /* Відступ від правого краю */
-  z-index: 99; /* Переконатися, що кнопка поверх інших елементів */
-  border: none; /* Прибрати стандартну рамку */
-  outline: none; /* Прибрати контур фокусу */
-  background-color: #F5E1A4; /* Колір вашого оранжевого акценту */
-  color: #000; /* Колір тексту/стрілки */
-  cursor: pointer; /* Зробити курсор "клікабельним" */
-  padding: 15px; /* Внутрішній відступ */
-  border-radius: 30%; /* Зробити кнопку круглою */
-  font-size: 18px; /* Розмір стрілки */
-  line-height: 0; /* Вирівнювання символу стрілки */
-  transition: background-color 0.3s, opacity 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #F5E1A4;
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30%;
+    font-size: 18px;
+    line-height: 0;
+    transition: background-color 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #scrollToTopBtn:hover {
-  background-color: #DBC88F; /* Темніший колір при наведенні */
+    background-color: #DBC88F;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+}
+
+.modal-content.clean-modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.close-btn {
+    color: #999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-header.clean-modal-header {
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-header.clean-modal-header h2 {
+    color: #333;
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #008080;
+    outline: none;
+}
+
+.validate-btn {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.validation-result {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.result-success {
+    border: 1px solid #5cb85c;
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.result-warning {
+    border: 1px solid #ebcc34;
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+}
+
+
+
+.submit-instructor-btn {
+    background-color: #008080;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.submit-instructor-btn:hover {
+    background-color: #005f5f;
+}
+
+.file-upload-label {
+    display: block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #ced4da;
+}
+
+.file-name-display {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.terms-checkbox {
+    margin-top: 15px;
+    font-size: 0.9em;
 }
