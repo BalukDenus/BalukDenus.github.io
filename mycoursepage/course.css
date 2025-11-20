@@ -1,4 +1,4 @@
-/* ================= GOOGLE FONTS & RESET ================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -50,13 +50,11 @@ img {
     display: block;
 }
 
-/* ================= HEADER ================= */
-/* ================= HEADER ================= */
+
 .header {
-    /* Колір, як на фото. Можна використати #F4D876 або #F4E4AD */
     background-color: #F4D876; 
     padding: 1rem 0; 
-    border-bottom: none; /* Прибираємо межу */
+    border-bottom: none; 
 }
 
 .nav-container {
@@ -64,15 +62,13 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap; 
-    gap: 1rem; /* Простір між основними блоками */
+    gap: 1rem; 
 }
 
-/* ---------------- ЛОГОТИП ТА BROWSE ---------------- */
 .logo-group {
     display: flex;
     align-items: center;
-    /* Зменшуємо мінімальну ширину, щоб притиснути елемент зліва */
-    min-width: 180px; /* Або 200px, залежно від бажаного відступу */
+    min-width: 180px; 
 }
 
 .logo {
@@ -80,13 +76,12 @@ img {
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    font-size: 1.25rem; /* Трохи зменшено шрифт лого */
-    color: var(--secondary-color); /* Темно-сірий колір тексту */
-    margin-right: 3.5rem; /* Відступ між лого та Browse */
+    font-size: 1.25rem; 
+    color: var(--secondary-color); 
+    margin-right: 3.5rem; 
 }
 
 .logo img {
-    /* Робимо логотип круглим і бірюзовим, як на фото */
     width: 38px;
     height: 38px;
     background-color: var(--primary-color);
@@ -99,28 +94,24 @@ img {
     font-weight: 500;
     font-size: 1rem;
     color: var(--secondary-color);
-    /* Додаємо невеликий відступ, щоб іконка стрілки не злипалася */
     padding-right: 3.5rem; 
 }
 
-/* Стиль для самої стрілки */
 .nav-browse .fas {
     font-size: 0.75rem; 
 }
 
 
-/* ---------------- ФОРМА ПОШУКУ ---------------- */
 .search-form {
-    flex-grow: 1; /* Займає більшу частину простору */
+    flex-grow: 1; 
     max-width: 600px; 
-    
-    /* Стиль, як на фото */
-    background-color: #F5F1E9; /* Світлий бежевий колір */
+
+    background-color: #F5F1E9; 
     border: none;
     border-radius: 4px; 
     overflow: hidden;
     height: 40px; 
-    display: flex; /* Для вирівнювання кнопки та поля */
+    display: flex; 
     align-items: center;
 }
 
@@ -128,14 +119,12 @@ img {
     background-color: #F5F1E9;
     padding: 0.5rem 1rem;
     flex-grow: 1; 
-    /* Видаляємо дефолтну рамку та outline */
     border: none;
     outline: none;
     font-size: 0.95rem;
 }
 
 .search-form button {
-    /* Кнопка на фото світла і квадратна */
     background-color: #F5F1E9;
     border: none;
     padding: 0 1rem;
@@ -148,15 +137,14 @@ img {
     justify-content: center;
 }
 
-/* ---------------- ДІЇ ТА АВАТАР ---------------- */
+
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.2rem; /* Простір між елементами дій */
+    gap: 1.2rem; 
 }
 
 .action-text {
-    /* Стиль для "Become Instructor" */
     font-weight: 500;
     white-space: nowrap; 
     font-size: 0.95rem;
@@ -173,7 +161,6 @@ img {
     color: var(--primary-color);
 }
 
-/* Стилі для випадаючого меню (потрібні, оскільки ми перегрупували елементи) */
 .dropdown {
     position: relative;
 }
@@ -198,20 +185,15 @@ img {
     display: block;
 }
 
-/* Аватар користувача */
 .user-avatar img {
     width: 38px; 
     height: 38px;
     border-radius: 50%; 
     object-fit: cover;
-    /* Додаємо ефект, як на фото (фіолетовий/рожевий відтінок) */
     box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
 }
 
 
-/* ================= HERO SECTION ================= */
-
-/* ====== HERO SECTION ====== */
 .hero-section {
     width: 100%;
     padding: 40px 0;
@@ -225,34 +207,30 @@ img {
     max-width: 1200px;
     height: 380px;
     background: #fff;
-    border-radius: 24px; /* Заокруглення зовнішнього контейнера */
+    border-radius: 24px; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    /* КЛЮЧОВЕ: Потрібен 'hidden', щоб обрізати вміст по border-radius */
     overflow: hidden; 
 }
 
-/* ===== LEFT SIDE CONTENT (ЖОВТИЙ БЛОК) ===== */
 .hero-content {
-    background: #FFD130; /* Колір з макету */
+    background: #FFD130; 
     padding: 60px 50px;
     color: #222;
     position: relative;
-    /* КЛЮЧОВЕ: Забезпечуємо, щоб жовтий блок не мав заокруглень на правій стороні */
     border-top-left-radius: 24px; 
     border-bottom-left-radius: 24px;
-    /* Знімаємо заокруглення справа, яке могло бути успадковане */
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-/* Легкий патерн хвиль як у макеті */
+
 .hero-content::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("imagescourse/pattern-yellow.png"); /* додай патерн */
+    background-image: url("imagescourse/pattern-yellow.png"); 
     background-size: cover;
     opacity: 0.25;
 }
@@ -272,7 +250,7 @@ img {
     position: relative;
 }
 
-/* BUTTON */
+
 .hero-btn {
     display: inline-block;
     padding: 14px 28px;
@@ -292,11 +270,9 @@ img {
     box-shadow: 0 6px 16px rgba(0,0,0,0.16);
 }
 
-/* ===== RIGHT SIDE IMAGE BLOCK ===== */
 .hero-media {
     position: relative;
     height: 100%;
-    /* ВИДАЛЯЄМО border-radius з hero-media, щоб уникнути конфлікту */
     border-radius: 0; 
 }
 
@@ -304,21 +280,16 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
-    /* КЛЮЧОВЕ: Використовуємо clip-path, щоб заокруглити лише праві кути */
     clip-path: inset(0 0 0 0 round 0 24px 24px 0);
 }
-/* Темний прозорий оверлей, як на референсі */
 .hero-media::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* КЛЮЧОВЕ: Забезпечуємо, що оверлей також заокруглений справа */
     border-radius: 0 24px 24px 0; 
     background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%);
 }
 
-/* ===== MEDIA INFO BLOCK (нижній правий текст) ===== */
 .hero-media-info {
     position: absolute;
     bottom: 18px;
@@ -327,11 +298,10 @@ img {
     gap: 22px;
     align-items: center;
     color: #fff;
-    /* Важливо: info-блок повинен бути вище оверлею */
     z-index: 10;
 }
 
-/* Author */
+
 .hero-author {
     display: flex;
     align-items: center;
@@ -356,20 +326,18 @@ img {
     opacity: 0.8;
 }
 
-/* Text right of author */
+
 .hero-media-text {
     font-size: 13px;
     line-height: 1.2;
     opacity: 0.9;
 }
-/* ================= MY COURSES SECTION ================= */
 
 .my-courses-section {
     padding: 3rem 0;
-    background-color: #f7f7f7; /* Світло-сірий фон, як на макеті */
+    background-color: #f7f7f7; 
 }
 
-/* ---------------- HEADER (ЗАГОЛОВКИ ТА ФІЛЬТРИ) ---------------- */
 .courses-header {
     display: flex;
     justify-content: space-between;
@@ -395,23 +363,18 @@ img {
 }
 
 .filter-dropdown select {
-    /* Стилізація під кнопку на макеті */
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #fff;
     color: var(--text-color);
     font-size: 0.9rem;
-    /* Прибираємо стандартні стрілки (залежить від браузера, краще робити кастомний dropdown) */
     -webkit-appearance: none; 
     -moz-appearance: none;
     appearance: none; 
-    padding-right: 2rem; /* Місце для кастомної стрілки, якщо вона використовується */
+    padding-right: 2rem; 
     cursor: pointer;
 }
-
-
-/* ---------------- КАРТКИ КУРСІВ (GRID) ---------------- */
 
 .courses-grid {
     display: grid;
@@ -425,7 +388,6 @@ img {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
-    /* Важливо для макету, щоб картка була цільним блоком */
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -439,7 +401,6 @@ img {
 .card-media {
     position: relative;
     width: 100%;
-    /* Співвідношення сторін для зображення (наприклад, 16:9) */
     padding-top: 56.25%; 
     overflow: hidden;
 }
@@ -467,9 +428,6 @@ img {
     z-index: 5;
 }
 
-/* Іконка меню (три крапки) */
-
-
 .card-content {
     padding: 1rem;
     flex-grow: 1;
@@ -485,7 +443,7 @@ img {
 
 .card-author {
     font-size: 0.85rem;
-    color: var(--secondary-color); /* Зелений/бірюзовий колір */
+    color: var(--secondary-color); 
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
@@ -496,19 +454,18 @@ img {
 
 .card-progress-text {
     font-size: 0.85rem;
-    color: #4CAF50; /* Зелений колір для прогресу */
+    color: #4CAF50; 
     font-weight: 600;
 }
 
 .card-progress-text.not-started {
-    color: #aaa; /* Сірий колір для "Not Yet Started" */
+    color: #aaa; 
 }
 
 .card-progress-text.completed {
-    color: #3880FF; /* Синій/блакитний колір для "Completed!" */
+    color: #3880FF; 
 }
 
-/* ---------------- FOOTER (ПАГІНАЦІЯ) ---------------- */
 .courses-footer {
     display: flex;
     justify-content: center;
@@ -522,7 +479,7 @@ img {
     color: var(--text-color);
     font-weight: 500;
     text-decoration: none;
-    display: none; /* Приховуємо на десктопі, показуємо на мобільному */
+    display: none; 
 }
 
 .pagination {
@@ -548,7 +505,7 @@ img {
 }
 
 .page-number.active, .page-number:hover {
-    background-color: var(--primary-color); /* Бірюзовий, як на логотипі */
+    background-color: var(--primary-color); 
     color: #fff;
     border-color: var(--primary-color);
 }
@@ -568,54 +525,47 @@ img {
     line-height: 0;
 }
 
-/* ---------------- Адаптивність (Базова) ---------------- */
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
-    /* Горизонтальна лінія над копірайтом */
     border-top: 1px solid #444; 
     font-size: 0.9rem;
 }
 
-/* ================= FOOTER ================= */
+
 .footer {
-    /* Темний фон, як на зображенні */
    background-color: #1B1B1B; 
     color: #fff;
     padding-top: 3rem; 
 }
 
 .footer-container {
-    /* Контейнер більше не Flex, оскільки у нас є два чітких блоки: top та bottom */
     display: flex;
     flex-direction: column;
 }
 
-/* ---------------- ВЕРХНІЙ БЛОК (ТОП) ---------------- */
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     padding-bottom: 2rem;
-    /* Лінія, що розділяє верхній і нижній блоки футера, знаходиться в нижньому блоці */
 }
 
-/* Стиль логотипу в футері */
+
 .footer-logo-block .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #fff; /* Білий колір */
+    color: #fff; 
 }
 
 .footer-logo-block .logo img {
-    /* Робимо логотип круглим і бірюзовим, як на фото */
     width: 38px;
     height: 38px;
     background-color: var(--primary-color);
@@ -624,11 +574,9 @@ img {
     object-fit: contain;
 }
 
-/* ---------------- СІТКА ПОСИЛАНЬ ---------------- */
-
 .footer-links-grid {
     display: flex;
-    gap: 4rem; /* Простір між колонками */
+    gap: 4rem; 
 }
 
 .links-column {
@@ -642,12 +590,12 @@ img {
     font-size: 0.95rem;
     opacity: 0.8;
     transition: opacity 0.2s;
-    white-space: nowrap; /* Запобігаємо перенесенню посилань */
+    white-space: nowrap; 
 }
 
 .links-column a:hover {
     opacity: 1;
-    color: var(--primary-color); /* При наведенні курсору */
+    color: var(--primary-color); 
 }
 
 .footer-copyright {
@@ -655,7 +603,6 @@ img {
     opacity: 0.7;
 }
 
-/* Соціальні мережі */
 .footer-social {
     display: flex;
     gap: 1rem;
@@ -672,26 +619,170 @@ img {
 }
 
 #scrollToTopBtn {
-  display: none; /* Спочатку приховати кнопку */
-  position: fixed; /* Зафіксувати позицію на екрані */
-  bottom: 20px; /* Відступ від низу */
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
   width: 50px;
   height: 50px;
-  right: 30px; /* Відступ від правого краю */
-  z-index: 99; /* Переконатися, що кнопка поверх інших елементів */
-  border: none; /* Прибрати стандартну рамку */
-  outline: none; /* Прибрати контур фокусу */
-  background-color: #F5E1A4; /* Колір вашого оранжевого акценту */
-  color: #000; /* Колір тексту/стрілки */
-  cursor: pointer; /* Зробити курсор "клікабельним" */
-  padding: 15px; /* Внутрішній відступ */
-  border-radius: 30%; /* Зробити кнопку круглою */
-  font-size: 18px; /* Розмір стрілки */
-  line-height: 0; /* Вирівнювання символу стрілки */
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #F5E1A4; 
+  color: #000;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 30%; 
+  font-size: 18px; 
+  line-height: 0; 
   transition: background-color 0.3s, opacity 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 #scrollToTopBtn:hover {
-  background-color: #DBC88F; /* Темніший колір при наведенні */
+  background-color: #DBC88F;
+}
+
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); 
+    padding-top: 20px; 
+}
+
+.modal-content.clean-modal-content {
+    background-color: #ffffff;
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.close-btn {
+    color: #999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-header.clean-modal-header {
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-header.clean-modal-header h2 {
+    color: #333; 
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #008080;
+    outline: none;
+}
+
+.validate-btn {
+    background-color: #f0ad4e; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.validation-result {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.result-success { border: 1px solid #5cb85c; background-color: #dff0d8; color: #3c763d; }
+.result-warning { border: 1px solid #ebcc34; background-color: #fcf8e3; color: #8a6d3b; }
+
+
+.submit-instructor-btn {
+    background-color: #008080; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.submit-instructor-btn:hover {
+    background-color: #005f5f;
+}
+
+.file-upload-label {
+    display: block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #ced4da;
+}
+
+.file-name-display {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.terms-checkbox {
+    margin-top: 15px;
+    font-size: 0.9em;
 }
