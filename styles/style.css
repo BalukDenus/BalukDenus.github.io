@@ -1,4 +1,4 @@
-/* ================= GOOGLE FONTS & RESET ================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -51,13 +51,10 @@ img {
     display: block;
 }
 
-/* ================= HEADER ================= */
-/* ================= HEADER ================= */
 .header {
-    /* Колір, як на фото. Можна використати #F4D876 або #F4E4AD */
     background-color: #F4D876; 
     padding: 1rem 0; 
-    border-bottom: none; /* Прибираємо межу */
+    border-bottom: none;
 }
 
 .nav-container {
@@ -65,15 +62,13 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap; 
-    gap: 1rem; /* Простір між основними блоками */
+    gap: 1rem;
 }
 
-/* ---------------- ЛОГОТИП ТА BROWSE ---------------- */
 .logo-group {
     display: flex;
     align-items: center;
-    /* Зменшуємо мінімальну ширину, щоб притиснути елемент зліва */
-    min-width: 180px; /* Або 200px, залежно від бажаного відступу */
+    min-width: 180px; 
 }
 
 .logo {
@@ -81,13 +76,12 @@ img {
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    font-size: 1.25rem; /* Трохи зменшено шрифт лого */
-    color: var(--secondary-color); /* Темно-сірий колір тексту */
-    margin-right: 3.5rem; /* Відступ між лого та Browse */
+    font-size: 1.25rem;
+    color: var(--secondary-color); 
+    margin-right: 3.5rem; 
 }
 
 .logo img {
-    /* Робимо логотип круглим і бірюзовим, як на фото */
     width: 38px;
     height: 38px;
     background-color: var(--primary-color);
@@ -100,28 +94,23 @@ img {
     font-weight: 500;
     font-size: 1rem;
     color: var(--secondary-color);
-    /* Додаємо невеликий відступ, щоб іконка стрілки не злипалася */
     padding-right: 3.5rem; 
 }
 
-/* Стиль для самої стрілки */
 .nav-browse .fas {
     font-size: 0.75rem; 
 }
 
 
-/* ---------------- ФОРМА ПОШУКУ ---------------- */
 .search-form {
-    flex-grow: 1; /* Займає більшу частину простору */
+    flex-grow: 1; 
     max-width: 600px; 
-    
-    /* Стиль, як на фото */
-    background-color: #F5F1E9; /* Світлий бежевий колір */
+    background-color: #F5F1E9; 
     border: none;
     border-radius: 4px; 
     overflow: hidden;
     height: 40px; 
-    display: flex; /* Для вирівнювання кнопки та поля */
+    display: flex; 
     align-items: center;
 }
 
@@ -129,14 +118,12 @@ img {
     background-color: #F5F1E9;
     padding: 0.5rem 1rem;
     flex-grow: 1; 
-    /* Видаляємо дефолтну рамку та outline */
     border: none;
     outline: none;
     font-size: 0.95rem;
 }
 
 .search-form button {
-    /* Кнопка на фото світла і квадратна */
     background-color: #F5F1E9;
     border: none;
     padding: 0 1rem;
@@ -149,15 +136,13 @@ img {
     justify-content: center;
 }
 
-/* ---------------- ДІЇ ТА АВАТАР ---------------- */
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.2rem; /* Простір між елементами дій */
+    gap: 1.2rem; 
 }
 
 .action-text {
-    /* Стиль для "Become Instructor" */
     font-weight: 500;
     white-space: nowrap; 
     font-size: 0.95rem;
@@ -174,7 +159,6 @@ img {
     color: var(--primary-color);
 }
 
-/* Стилі для випадаючого меню (потрібні, оскільки ми перегрупували елементи) */
 .dropdown {
     position: relative;
 }
@@ -199,16 +183,13 @@ img {
     display: block;
 }
 
-/* Аватар користувача */
 .user-avatar img {
     width: 38px; 
     height: 38px;
     border-radius: 50%; 
     object-fit: cover;
-    /* Додаємо ефект, як на фото (фіолетовий/рожевий відтінок) */
     box-shadow: 0 0 0 2px #E9A1E4, 0 0 0 3px #9D7BE7; 
 }
-/* ================= HERO SECTION ================= */
 .hero {
     padding: 4rem 0;
     background-color: #F4D876;
@@ -245,25 +226,23 @@ img {
     transition: all 0.3s;
     border: 1px solid transparent;
 }
-/* ОНОВЛЕНИЙ КОЛІР: ТЕПЕР СВІТЛА КНОПКА З БІЛИМ ФОНОМ (ЯК "Start make your account") */
 .btn-primary {
-    background-color: var(--card-bg-color); /* Колір вторинної кнопки */
-    color: #000; /* Змінено на чорний або темний, щоб був видно на світлому фоні */
-    border-color: #ddd; /* Рамка вторинної кнопки */
+    background-color: var(--card-bg-color); 
+    color: #000; 
+    border-color: #ddd; 
 }
 .btn-primary:hover {
-    background-color: #248b7a; /* Колір :hover вторинної кнопки */
+    background-color: #248b7a; 
 }
 
-/* ОНОВЛЕНИЙ КОЛІР: ТЕПЕР ТЕМНА КНОПКА З ЗЕЛЕНУВАТИМ ФОНОМ (ЯК "Browse Course") */
 .btn-secondary {
-    background-color: var(--primary-color); /* Колір основної кнопки */
-    color: #fff; /* Колір тексту основної кнопки */
-    border-color: transparent; /* Рамка основної кнопки */
+    background-color: var(--primary-color); 
+    color: #fff; 
+    border-color: transparent; 
 }
 .btn-secondary:hover {
-    background-color: #ddd; /* Колір :hover основної кнопки */
-    color: #000; /* Змінено на темний, щоб був видно на світлому hover-фоні */
+    background-color: #ddd; 
+    color: #000; 
 }
 
 .hero-image img {
@@ -275,7 +254,7 @@ img {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
-/* ================= COURSES SECTION ================= */
+
 .courses-section, .instructors-section {
     padding: 4rem 0;
 }
@@ -372,7 +351,6 @@ h2 {
     margin-left: 0.5rem;
 }
 
-/* ================= INSTRUCTORS SECTION ================= */
 .instructor-card {
     text-align: center;
 }
@@ -390,47 +368,41 @@ h2 {
     color: var(--light-text-color);
 }
 
-/* ================= NEWSLETTER SECTION ================= */
 .newsletter-section {
-    padding: 4rem 0; /* Вертикальний відступ */
+    padding: 4rem 0; 
 }
 
 .newsletter-container {
-    background-color: #3880FF; /* Яскравий синій колір */
-    border-radius: var(--border-radius); /* Використовуємо існуючий радіус */
+    background-color: #3880FF; 
+    border-radius: var(--border-radius); 
     color: #fff;
-    padding: 3rem 4rem; /* Внутрішній відступ */
+    padding: 3rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
     position: relative;
-    overflow: hidden; /* Обрізаємо фоновий малюнок по краях */
+    overflow: hidden; 
 }
 
-/* ---------------- Фоновий малюнок (декорація справа) ---------------- */
 .newsletter-container::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 300px; /* Приблизна ширина малюнка */
+    width: 300px; 
     height: 100%;
-    /* ЦЕ ВАЖЛИВО: вам потрібно буде замінити цей URL на реальний шлях 
-       до зображення, яке містить абстрактний малюнок */
     background: url('path/to/abstract_design.png') no-repeat right center / contain;
     z-index: 1; 
     opacity: 0.8; 
 }
-/* Переносимо контент форми вище за фоновий малюнок */
+
 .newsletter-content, .newsletter-form {
     z-index: 2;
 }
 
-/* ---------------- Контент та заголовки ---------------- */
 .newsletter-content {
     max-width: 50%;
-    /* Гарантуємо, що текст вирівняний зліва */
     text-align: left; 
 }
 
@@ -440,19 +412,16 @@ h2 {
     margin-bottom: 0.5rem;
     line-height: 1.2;
     color: #fff;
-    /* Також гарантуємо вирівнювання для h2 */
     text-align: left;
 }
 
 .newsletter-content p {
     font-size: 1rem;
     opacity: 0.9;
-    /* Також гарантуємо вирівнювання для p */
     text-align: left;
 }
 
 
-/* ---------------- Форма підписки ---------------- */
 .newsletter-form {
     display: flex;
     gap: 1rem;
@@ -460,11 +429,10 @@ h2 {
     min-width: 400px; 
 }
 
-/* Контейнер для поля вводу з іконкою */
 .input-with-icon {
     position: relative;
     flex-grow: 1;
-    background-color: rgba(255, 255, 255, 0.4); /* Світлий прозорий фон */
+    background-color: rgba(255, 255, 255, 0.4); 
     border-radius: 4px;
     height: 50px;
 }
@@ -472,7 +440,7 @@ h2 {
 .input-with-icon input {
     width: 100%;
     height: 100%;
-    padding: 0.75rem 3rem 0.75rem 1rem; /* Збільшуємо padding праворуч для іконки */
+    padding: 0.75rem 3rem 0.75rem 1rem; 
     border: none;
     background: transparent;
     outline: none;
@@ -480,12 +448,10 @@ h2 {
     font-size: 1rem;
 }
 
-/* Стиль плейсхолдера, щоб він був світлішим */
 .input-with-icon input::placeholder {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Стиль іконки */
 .input-with-icon .fas {
     position: absolute;
     right: 1rem;
@@ -495,9 +461,7 @@ h2 {
     font-size: 1.1rem;
 }
 
-/* Кнопка підписки */
 .btn-subscribe {
-    /* Зелений колір як на макеті */
     background-color: #4CAF50; 
     color: #fff;
     font-weight: 600;
@@ -506,49 +470,42 @@ h2 {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    height: 50px; /* Вирівнюємо з висотою поля вводу */
+    height: 50px; 
 }
 
 .btn-subscribe:hover {
     background-color: #388E3C;
 }
-/* ================= FOOTER ================= */
-/* ================= FOOTER ================= */
+
 .footer {
-    /* Темний фон, як на зображенні */
    background-color: #1B1B1B; 
     color: #fff;
     padding-top: 3rem; 
 }
 
 .footer-container {
-    /* Контейнер більше не Flex, оскільки у нас є два чітких блоки: top та bottom */
     display: flex;
     flex-direction: column;
 }
 
-/* ---------------- ВЕРХНІЙ БЛОК (ТОП) ---------------- */
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     padding-bottom: 2rem;
-    /* Лінія, що розділяє верхній і нижній блоки футера, знаходиться в нижньому блоці */
 }
 
-/* Стиль логотипу в футері */
 .footer-logo-block .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
     font-size: 1.25rem;
-    color: #fff; /* Білий колір */
+    color: #fff; 
 }
 
 .footer-logo-block .logo img {
-    /* Робимо логотип круглим і бірюзовим, як на фото */
     width: 38px;
     height: 38px;
     background-color: var(--primary-color);
@@ -557,11 +514,9 @@ h2 {
     object-fit: contain;
 }
 
-/* ---------------- СІТКА ПОСИЛАНЬ ---------------- */
-
 .footer-links-grid {
     display: flex;
-    gap: 4rem; /* Простір між колонками */
+    gap: 4rem; 
 }
 
 .links-column {
@@ -575,22 +530,19 @@ h2 {
     font-size: 0.95rem;
     opacity: 0.8;
     transition: opacity 0.2s;
-    white-space: nowrap; /* Запобігаємо перенесенню посилань */
+    white-space: nowrap; 
 }
 
 .links-column a:hover {
     opacity: 1;
-    color: var(--primary-color); /* При наведенні курсору */
+    color: var(--primary-color); 
 }
-
-/* ---------------- НИЖНІЙ БЛОК (BOTTOM) ---------------- */
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
-    /* Горизонтальна лінія над копірайтом */
     border-top: 1px solid #444; 
     font-size: 0.9rem;
 }
@@ -600,7 +552,6 @@ h2 {
     opacity: 0.7;
 }
 
-/* Соціальні мережі */
 .footer-social {
     display: flex;
     gap: 1rem;
@@ -617,21 +568,16 @@ h2 {
 }
 
 
-/* ---------------- Адаптивність ---------------- */
-/* ================= COURSE SECTION RECOMMEND (CS) ================= */
 .course-section-recommend {
     padding: 3rem 0;
-    /* Білий фон для виділення секції на світлому фоні сторінки */
     background-color: var(--card-bg-color); 
 }
 
-/* Заголовки секцій */
 .cs-title {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
     color: var(--text-color);
-    /* ГАРАНТУЄМО ВИРІВНЮВАННЯ ЗЛІВА */
     text-align: left; 
 }
 
@@ -639,11 +585,9 @@ h2 {
     font-size: 0.95rem;
     color: var(--light-text-color);
     margin-bottom: 2rem;
-    /* ГАРАНТУЄМО ВИРІВНЮВАННЯ ЗЛІВА */
     text-align: left;
 }
 
-/* Стилі для сітки (Grid Layout) */
 .cs-grid {
     display: grid;
     gap: 1.5rem;
@@ -657,8 +601,6 @@ h2 {
 .cs-grid-4 {
     grid-template-columns: repeat(4, 1fr);
 }
-
-/* ---------------- ОСНОВНІ КАРТКИ (cs-card) ---------------- */
 
 .cs-card {
     background-color: var(--card-bg-color);
@@ -675,12 +617,12 @@ h2 {
 }
 
 .cs-card-media {
-    height: 150px; /* Фіксована висота для зображень */
+    height: 150px; 
     overflow: hidden;
     position: relative;
 }
 
-.cs-card-media > [Image] { /* Стилі для вашого зображення */
+.cs-card-media > [Image] { 
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -694,7 +636,6 @@ h2 {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
-    /* Обмеження тексту двома рядками */
     display: -webkit-box;
 
     -webkit-box-orient: vertical;
@@ -707,8 +648,6 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* ---------------- БЛОК 1: НЕЗАВЕРШЕНІ КУРСИ (cs-card-progress) ---------------- */
-
 .cs-card-progress .cs-card-content {
     padding: 0.75rem 1rem 1rem;
 }
@@ -719,13 +658,11 @@ h2 {
     font-weight: 500;
 }
 
-/* ---------------- ФІЛЬТРИ ТЕГІВ ---------------- */
-
 .cs-tag-filters {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-bottom: 3rem; /* Відступ між фільтрами та другою секцією */
+    margin-bottom: 3rem; 
 }
 
 .cs-tag {
@@ -750,9 +687,7 @@ h2 {
     color: var(--primary-color);
 }
 
-/* ---------------- БЛОК 2: ПРЕМІУМ КУРСИ (cs-card-premium) ---------------- */
 
-/* Бейджики (Best Seller, Discount) */
 .cs-card-media {
     position: relative;
 }
@@ -775,26 +710,23 @@ h2 {
 }
 
 .cs-badge-best {
-    background-color: #38b000; /* Зелений */
+    background-color: #38b000; 
 }
 
 .cs-badge-discount {
-    background-color: #c90030; /* Червоний */
+    background-color: #c90030; 
 }
 
-/* Опис курсу */
 .cs-card-desc {
     font-size: 0.8rem;
     color: var(--light-text-color);
     margin-bottom: 0.75rem;
-    /* Обмеження тексту трьома рядками */
     display: -webkit-box;
  
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Рейтинг */
 .cs-card-rating {
     color: var(--star-color);
     font-size: 0.75rem;
@@ -807,7 +739,6 @@ h2 {
     margin-left: 0.25rem;
 }
 
-/* Ціна */
 .cs-card-price {
     margin-top: 0.75rem;
     display: flex;
@@ -825,30 +756,189 @@ h2 {
     font-size: 0.9rem;
     color: var(--light-text-color);
     text-decoration: line-through;
-    margin-bottom: 1px; /* Для візуального вирівнювання */
+    margin-bottom: 1px; 
 }
 
 #scrollToTopBtn {
-  display: none; /* Спочатку приховати кнопку */
-  position: fixed; /* Зафіксувати позицію на екрані */
-  bottom: 20px; /* Відступ від низу */
+  display: none;
+  position: fixed; 
+  bottom: 20px;
   width: 50px;
   height: 50px;
-  right: 30px; /* Відступ від правого краю */
-  z-index: 99; /* Переконатися, що кнопка поверх інших елементів */
-  border: none; /* Прибрати стандартну рамку */
-  outline: none; /* Прибрати контур фокусу */
-  background-color: #F5E1A4; /* Колір вашого оранжевого акценту */
-  color: #000; /* Колір тексту/стрілки */
-  cursor: pointer; /* Зробити курсор "клікабельним" */
-  padding: 15px; /* Внутрішній відступ */
-  border-radius: 30%; /* Зробити кнопку круглою */
-  font-size: 18px; /* Розмір стрілки */
-  line-height: 0; /* Вирівнювання символу стрілки */
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #F5E1A4; 
+  color: #000; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 30%;
+  font-size: 18px; 
+  line-height: 0; 
   transition: background-color 0.3s, opacity 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 #scrollToTopBtn:hover {
-  background-color: #DBC88F; /* Темніший колір при наведенні */
+  background-color: #DBC88F; 
+}
+
+
+.header-actions .action-text {
+   
+    font-weight: 500;
+    color: #333; 
+    text-decoration: none;
+    padding: 8px 15px; 
+    cursor: pointer;
+    transition: color 0.2s;
+ 
+}
+
+.header-actions .action-text:hover {
+    color: #008080; 
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); 
+    padding-top: 20px; 
+}
+
+.modal-content.clean-modal-content {
+    background-color: #ffffff;
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.close-btn {
+    color: #999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-header.clean-modal-header {
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-header.clean-modal-header h2 {
+    color: #333; 
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #008080; 
+    outline: none;
+}
+
+.validate-btn {
+    background-color: #f0ad4e; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.validation-result {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.result-success { border: 1px solid #5cb85c; background-color: #dff0d8; color: #3c763d; }
+.result-warning { border: 1px solid #ebcc34; background-color: #fcf8e3; color: #8a6d3b; }
+
+
+
+.submit-instructor-btn {
+    background-color: #008080; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.submit-instructor-btn:hover {
+    background-color: #005f5f;
+}
+
+.file-upload-label {
+    display: block;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #ced4da;
+}
+
+.file-name-display {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.terms-checkbox {
+    margin-top: 15px;
+    font-size: 0.9em;
 }
